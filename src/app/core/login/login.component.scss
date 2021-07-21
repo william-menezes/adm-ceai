@@ -1,0 +1,22 @@
+@import "../../../assets/scss/__variables.scss";
+
+.container-fluid {
+    background: linear-gradient(45deg, $primary, $terciary);
+}
+
+.container {
+    background: #fff;
+}
+
+span {
+    font-weight: bold;
+    color: $primary;
+}
+
+a {
+    font-size: 0.8rem;
+    font-style: italic;
+    &:hover{
+        color: $primary !important;
+    }
+}

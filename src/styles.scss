@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+@import "assets/scss/_variables";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Forms, link and lists*/
+input, select, textarea, button, a, li {
+    outline: none !important;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.form-control {
+    border: 1px solid $primary;
+}
+
+label {
+    margin-bottom: 0 !important;
+    font-weight: bold;
+}
+
+
+/*Buttons*/
+.btn {
+    padding: 10px 40px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-primary {
+    background: $primary !important;
+    border: 1px solid $primary;
+    &:hover {
+        background: #fff !important;
+        color: $primary;
+    }
+}
+
+.btn-secondary {
+    background: $secondary !important;
+    border: 1px solid $secondary;
+    &:hover {
+        background: #fff !important;
+        color: $secondary;
+    }
+}
