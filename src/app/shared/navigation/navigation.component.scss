@@ -1,0 +1,32 @@
+@import '../../../assets/scss/_variables';
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+mat-sidenav {
+  background-color: $primary;
+
+  mat-toolbar img{
+    width: 180px;
+    padding: 20px;
+  }
+
+  mat-nav-list a {
+    color: #fff;
+  }
+}

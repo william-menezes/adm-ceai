@@ -1,25 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
-import { HeaderComponent } from './header/header.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { LayoutModule } from '@angular/cdk/layout';
+
+import { MaterialModule } from '../material/material.module';
+
 
 
 
 @NgModule({
   declarations: [
-    SidebarComponent,
-    BreadcrumbComponent,
-    HeaderComponent,
+    NavigationComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    LayoutModule,
+    MaterialModule,
   ],
   exports: [
-    SidebarComponent,
-    BreadcrumbComponent,
-    HeaderComponent
+    NavigationComponent
   ]
 })
 export class SharedModule { }
