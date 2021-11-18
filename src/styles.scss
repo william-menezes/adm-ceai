@@ -2,55 +2,39 @@
 @import "assets/scss/_variables";
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-
-/*Forms, link and lists*/
-input, select, textarea, button, a, li {
-    outline: none !important;
-}
-
-a {
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.form-control {
-    border: 1px solid $primary;
-}
-
-label {
-    margin-bottom: 0 !important;
-    font-weight: bold;
-}
-
 
 /*Buttons*/
 .btn {
-    padding: 10px 40px;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .btn-primary {
-    background: $primary !important;
-    border: 1px solid $primary;
-    &:hover {
-        background: #fff !important;
-        color: $primary;
-    }
+  background: $primary !important;
+  color: #fff;
+  &:hover {
+    background: #fff !important;
+    color: $primary;
+  }
 }
 
 .btn-secondary {
-    background: $secondary !important;
-    border: 1px solid $secondary;
-    &:hover {
-        background: #fff !important;
-        color: $secondary;
-    }
+  background: $secondary !important;
+  &:hover {
+    background: #fff !important;
+    color: $secondary;
+  }
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

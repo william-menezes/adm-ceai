@@ -1,22 +1,97 @@
 @import "../../../assets/scss/__variables.scss";
 
-.container-fluid {
-    background: linear-gradient(45deg, $primary, $terciary);
-}
-
 .container {
-    background: #fff;
-}
+  width: 100vw;
+  height: 100vh;
 
-span {
-    font-weight: bold;
-    color: $primary;
-}
+  display: flex;
+  justify-content: center;
 
-a {
-    font-size: 0.8rem;
-    font-style: italic;
-    &:hover{
-        color: $primary !important;
+  .container-left {
+    width: 60%;
+    background: url("../../../assets/img/circles.svg") no-repeat left bottom,
+      linear-gradient(200deg, #0575e6, #021b79);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container-left_content {
+      color: #fff;
+      font-size: 1.125rem;
+      line-height: 1.5rem;
+      padding: 50px;
+
+      h2 {
+        font-size: 2.5rem;
+      }
     }
+  }
+
+  .form-login {
+    width: 40%;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .form-login__header {
+      font-size: 1.438rem;
+      font-weight: bold;
+    }
+
+    .form-login__field {
+      min-width: 330px;
+    }
+
+    .form-login__link {
+      font-style: italic;
+      font-weight: bold;
+      text-decoration: none;
+      color: #333;
+    }
+
+    mat-hint {
+      a {
+        font-style: italic;
+        text-decoration: none;
+        color: #333;
+      }
+    }
+
+    .form-login__button {
+      width: 330px;
+      margin: 15px 0;
+
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .container-right {
+    .container-right_form {
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .container-left {
+      display: none;
+    }
+
+    .form-login {
+      width: 100vw;
+      height: 100vh;
+    }
+  }
 }

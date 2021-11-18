@@ -1,41 +1,36 @@
-<div class="container-fluid vh-100 d-flex justify-content-center align-items-center">
-    <div class="container rounded d-flex align-items-center">
-        <div class="row">
-            <div class="col-md-7">
-                <div class="row m-4 gy-5">
-                    <div class="col-md-12">
-                        <img src="../../../assets/img/Telecommuting-pana.svg" alt="">
-                    </div>
-                    <div class="col-md-12">
-                        <h5 class="px-3">Bem-vindo ao sistema de gerenciamento de dados do <span>CEAI Rondon</span>.</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-5 p-3 d-flex align-items-center">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2 class="text-center mb-4">Login</h2>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="mb-4">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="exemplo@email.com">
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="mb-4">
-                            <label for="password">Senha</label>
-                            <input type="password" class="form-control" id="Password" placeholder="Senha">
-                            <a>Esqueci minha senha</a>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <button type="button" class="btn btn-primary w-100" (click)="goToAdmin()">
-                            ENTRAR
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="container">
+  <div class="container-left">
+    <div class="container-left_content">
+      <h2>CEAI</h2>
+      <p>Bem-vindo ao sistema de gestão de dados do CEAI Rondon</p>
     </div>
+  </div>
+
+  <div class="form-login">
+    <h3 class="form-login__header">Login</h3>
+
+    <mat-form-field appearance="outline" class="form-login__field">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="usuario@email.com" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-login__field">
+      <mat-label>Senha</mat-label>
+      <input matInput placeholder="Senha" [type]="hide ? 'password' : 'text'" />
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+      <mat-hint align="end" class="form-login_link">
+        <a routerLink="#">Esqueci minha senha</a>
+      </mat-hint>
+    </mat-form-field>
+
+    <button mat-button class="form-login__button btn-primary">Entrar</button>
+
+    <button mat-button class="form-login__button btn-primary">
+      <i class="fa fa-google fa-lg"></i>Ou entrar com o Google
+    </button>
+
+    <p>Não tem uma conta? <a routerLink="#" class="form-login__link">Cadastre-se</a></p>
+  </div>
 </div>
