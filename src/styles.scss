@@ -1,34 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
 @import "assets/scss/_variables";
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+//Angular Material Theme – Custom Colors
+@import "@angular/material/theming";
+@include mat-core();
 
-/*Buttons*/
-.btn {
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
+$my-primary-color: (
+  500: #0057aa,
+  700: #004989,
+  800: #0f3c64,
+  900: #002c42,
+  A100: #3aabdd,
+  contrast: (
+    500: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #ffffff,
+  ),
+);
 
-.btn-primary {
-  background: $primary !important;
-  color: #fff;
-  &:hover {
-    background: #fff !important;
-    color: $primary;
-  }
-}
+$my-secondary-color: (
+  500: #FFD300,
+  contrast: (
+    500: #FFFFFF,
+  )
+);
 
-.btn-secondary {
-  background: $secondary !important;
-  &:hover {
-    background: #fff !important;
-    color: $secondary;
-  }
-}
+
+$custom-app-primary: mat-palette($my-primary-color);
+$custom-app-secondary: mat-palette($mat-yellow);
+$custom-app-warn: mat-palette($mat-red);
+
+$custom-theme: mat-light-theme($custom-app-primary, $custom-app-secondary, $custom-app-warn);
+
+@include angular-material-theme($custom-theme);
+/***************************************************************************************************/
 
 html,
 body {
@@ -37,4 +44,10 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
