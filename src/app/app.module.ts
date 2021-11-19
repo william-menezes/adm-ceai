@@ -14,12 +14,16 @@ import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
+import { ForgotPasswordComponent } from './core/forgot-password/forgot-password.component';
+import { SignUpComponent } from './core/sign-up/sign-up.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    ForgotPasswordComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,

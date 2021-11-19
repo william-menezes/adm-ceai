@@ -1,6 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-@import "assets/scss/_variables";
-
 //Angular Material Theme – Custom Colors
 @import "@angular/material/theming";
 @include mat-core();
