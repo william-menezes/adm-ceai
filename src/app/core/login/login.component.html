@@ -21,16 +21,16 @@
         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
       <mat-hint align="end" class="form-login_link">
-        <a routerLink="#">Esqueci minha senha</a>
+        <a routerLink="#" (click)="openDialog()">Esqueci minha senha</a>
       </mat-hint>
     </mat-form-field>
 
-    <button mat-button class="form-login__button btn-primary">Entrar</button>
+    <button mat-raised-button color="primary" class="form-login__button">Entrar</button>
 
-    <button mat-button class="form-login__button btn-primary">
+    <button mat-raised-button color="primary" class="form-login__button">
       <i class="fa fa-google fa-lg"></i>Ou entrar com o Google
     </button>
 
-    <p>Não tem uma conta? <a routerLink="#" class="form-login__link">Cadastre-se</a></p>
+    <p>Não tem uma conta? <a routerLink="/sign-up" class="form-login__link">Cadastre-se</a></p>
   </div>
 </div>

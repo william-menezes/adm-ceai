@@ -1,1 +1,46 @@
-<p>sign-up works!</p>
+<div class="container">
+  <div class="container-left">
+    <div class="container-left_content">
+      <h2>CEAI</h2>
+      <p>Bem-vindo ao sistema de gestão de dados do CEAI Rondon</p>
+    </div>
+  </div>
+
+  <div class="form-sign-up">
+    <h3 class="form-sign-up__header">Crie sua conta</h3>
+
+    <mat-form-field appearance="outline" class="form-sign-up__field">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Seu E-mail" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-sign-up__field">
+      <mat-label>Nome</mat-label>
+      <input matInput placeholder="Seu nome" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-sign-up__field">
+      <mat-label>Senha</mat-label>
+      <input matInput placeholder="Senha" [type]="hide ? 'password' : 'text'" />
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-sign-up__field">
+      <mat-label>Confirme sua senha</mat-label>
+      <input matInput placeholder="Confirme sua senha" [type]="hide ? 'password' : 'text'" />
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" class="form-sign-up__button">Cadastrar</button>
+
+    <button mat-raised-button color="primary" class="form-sign-up__button">
+      <i class="fa fa-google fa-lg"></i>Ou cadastrar com o Google
+    </button>
+
+    <p>Já tem uma conta? <a routerLink="/login" class="form-sign-up__link">Fazer login.</a></p>
+  </div>
+</div>
