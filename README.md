@@ -6,7 +6,7 @@ AdmCeai é um ERP, *Enterprise Resource Planning*, ou Sistema de Gestão Integra
 
 ## Link para visualização do projeto
 
-(https://adm-ceai.app.vercel)
+https://adm-ceai.vercel.app
 
 ## 💻 Tecnologias:
 
